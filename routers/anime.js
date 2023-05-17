@@ -1,11 +1,11 @@
 const AxiosService = require("../helpers/axiosService");
 const router = require("express").Router();
 const cheerio = require("cheerio");
-const replaceUrlPage = ["https://oploverz.tv/", "https://oploverz.tv/anime/"];
-let url = "https://oploverz.tv/";
+const   replaceUrlPage   = [ "https://oploverz.best/" , "https://oploverz.best/anime/" ];
+biarkan  url  =  "https://oploverz.best/" ;
 // home -------Done------
 router.get("/s", async (req, res) => {
-  let url = "https://miownime.com/";
+  biarkan  url  =  "https://m.meownime.ai/" ;
 
   try {
     const response = await AxiosService(url);
