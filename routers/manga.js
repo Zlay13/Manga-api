@@ -10,7 +10,7 @@ const AxiosService = require("../helpers/axiosService");
 
 //mangalist  -------Done------
 router.get("/mangaku", async (req, res) => {
-  let url = "https://mangaku.vip";
+  let url = "https://mangaku.cam";
 
   try {
     const response = await AxiosService(url);
