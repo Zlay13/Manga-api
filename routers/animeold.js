@@ -4,7 +4,7 @@ const cheerio = require("cheerio");
 
 // home -------Done------
 router.get("/s", async (req, res) => {
-  let url = "https://miownime.com/";
+  let url = "https://m.meownime.ai//";
 
   try {
     const response = await AxiosService(url);
@@ -28,7 +28,7 @@ router.get("/s", async (req, res) => {
       });
 
       var detailUrlNew = detailUrl.filter(function (el) {
-        return el != '/ongoing/' && el != '/completed/' && el != '/movie/' && el != "https://miownime.com/";
+        return el != '/ongoing/' && el != '/completed/' && el != '/movie/' && el != "https://m.meownime.ai//";
       });
 
       var data = [];
@@ -80,7 +80,7 @@ router.get("/", async (req, res) => {
       });
 
       // var detailUrlNew = detailUrl.filter(function (el) {
-      //   return el != '/ongoing/' && el != '/completed/' && el != '/movie/' && el != "https://miownime.com/";
+      //   return el != '/ongoing/' && el != '/completed/' && el != '/movie/' && el != "https://m.meownime.ai//";
       // });
       let list_popular = [];
       $('.hothome').next().find(".excstf").children().each(function (i, e) {
@@ -163,7 +163,7 @@ router.get("/", async (req, res) => {
 router.get("/detail/:param", async (req, res) => {
   const param = req.params.param;
 
-  let url = `https://miownime.com/${param}`;
+  let url = `https://m.meownime.ai//${param}`;
 
   try {
     const response = await AxiosService(url);
@@ -246,7 +246,7 @@ router.get("/detail/:param", async (req, res) => {
 // search -------Done------
 router.get("/search/:param", async (req, res) => {
   let param = req.params.param;
-  let url = `https://miownime.com/?s=${param}`;
+  let url = `https://m.meownime.ai//?s=${param}`;
 
   try {
     const response = await AxiosService(url);
@@ -295,7 +295,7 @@ router.get("/search/:param", async (req, res) => {
 
 // genre -------Done------
 router.get("/genre", async (req, res) => {
-  let url = "https://miownime.com/genre";
+  let url = "https://m.meownime.ai//genre";
 
   try {
     const response = await AxiosService(url);
@@ -338,7 +338,7 @@ router.get("/genre", async (req, res) => {
 
 // genre -------Done------
 router.get("/genre", async (req, res) => {
-  let url = "https://miownime.com/genre";
+  let url = "https://m.meownime.ai//genre";
 
   try {
     const response = await AxiosService(url);
@@ -382,7 +382,7 @@ router.get("/genre", async (req, res) => {
 // genre detail -------Done------
 router.get("/genre/:param", async (req, res) => {
   let param = req.params.param;
-  let url = `https://miownime.com/genre/${param}`;
+  let url = `https://m.meownime.ai//genre/${param}`;
 
   try {
     const response = await AxiosService(url);
@@ -433,10 +433,10 @@ router.get("/genre/:param", async (req, res) => {
 router.get("/genre/:param/page/:id", async (req, res) => {
   let param = req.params.param;
   let id = req.params.id;
-  let url = `https://miownime.com/genre/${param}/page/${id}`;
+  let url = `https://m.meownime.ai//genre/${param}/page/${id}`;
 
-  if (url == `https://miownime.com/genre/${param}/page/1`)
-    url = `https://miownime.com/genre/${param}`;
+  if (url == `https://m.meownime.ai//genre/${param}/page/1`)
+    url = `https://m.meownime.ai//genre/${param}`;
 
   try {
     const response = await AxiosService(url);
@@ -485,7 +485,7 @@ router.get("/genre/:param/page/:id", async (req, res) => {
 
 // season -------Done------
 router.get("/season", async (req, res) => {
-  let url = "https://miownime.com/genre/#season";
+  let url = "https://m.meownime.ai//genre/#season";
 
   try {
     const response = await AxiosService(url);
@@ -535,7 +535,7 @@ router.get("/season", async (req, res) => {
 // season detail -------Done------
 router.get("/season/:param", async (req, res) => {
   let param = req.params.param;
-  let url = `https://miownime.com/season/${param}`;
+  let url = `https://m.meownime.ai//season/${param}`;
 
   try {
     const response = await AxiosService(url);
@@ -587,9 +587,9 @@ router.get("/season/:param/page/:id", async (req, res) => {
   let param = req.params.param;
   let id = req.params.id;
 
-  let url = `https://miownime.com/season/${param}/page/${id}`;
-  if (url == `https://miownime.com/season/${param}/page/1`)
-    url = `https://miownime.com/season/${param}`;
+  let url = `https://m.meownime.ai//season/${param}/page/${id}`;
+  if (url == `https://m.meownime.ai//season/${param}/page/1`)
+    url = `https://m.meownime.ai//season/${param}`;
 
   try {
     const response = await AxiosService(url);
@@ -638,7 +638,7 @@ router.get("/season/:param/page/:id", async (req, res) => {
 
 // studio -------Done------
 router.get("/studio", async (req, res) => {
-  let url = "https://miownime.com/genre/#studio";
+  let url = "https://m.meownime.ai//genre/#studio";
 
   try {
     const response = await AxiosService(url);
@@ -686,7 +686,7 @@ router.get("/studio", async (req, res) => {
 // studio detail -------Done------
 router.get("/studio/:param", async (req, res) => {
   let param = req.params.param;
-  let url = `https://miownime.com/studio/${param}`;
+  let url = `https://m.meownime.ai//studio/${param}`;
 
   try {
     const response = await AxiosService(url);
@@ -738,9 +738,9 @@ router.get("/studio/:param/page/:id", async (req, res) => {
   let param = req.params.param;
   let id = req.params.id;
 
-  let url = `https://miownime.com/studio/${param}/page/${id}`;
-  if (url == `https://miownime.com/studio/${param}/page/1`)
-    url = `https://miownime.com/studio/${param}`;
+  let url = `https://m.meownime.ai//studio/${param}/page/${id}`;
+  if (url == `https://m.meownime.ai//studio/${param}/page/1`)
+    url = `https://m.meownime.ai//studio/${param}`;
 
   try {
     const response = await AxiosService(url);
@@ -789,7 +789,7 @@ router.get("/studio/:param/page/:id", async (req, res) => {
 
 // completed -------Done------
 router.get("/completed", async (req, res) => {
-  let url = "https://miownime.com/anime-list-baru/#completed";
+  let url = "https://m.meownime.ai//anime-list-baru/#completed";
 
   try {
     const response = await AxiosService(url);
@@ -832,7 +832,7 @@ router.get("/completed", async (req, res) => {
 
 // schedule ------Done-----------
 router.get("/schedule", async (req, res) => {
-  let url = "https://miownime.com/jadwal-rilis/";
+  let url = "https://m.meownime.ai//jadwal-rilis/";
 
   try {
     const response = await AxiosService(url);
